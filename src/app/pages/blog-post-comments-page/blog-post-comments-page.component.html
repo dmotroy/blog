@@ -1,0 +1,22 @@
+<h1 class="my-4">
+  Alle Kommentare
+</h1>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Name</th>
+    <th scope="col">Blogeintrag</th>
+    <th scope="col">Datum</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let comment of comments.reverse()">
+    <th scope="row">{{ comment.id }}</th>
+    <td>{{ comment.name }}</td>
+    <td><a routerLink="/blog/{{ comment.blog_post.id }}">{{ comment.blog_post.title }}</a></td>
+    <td>{{ comment.created_at | date:'dd.MM.yy, h:mm' }}</td>
+  </tr>
+  </tbody>
+</table>

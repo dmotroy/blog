@@ -13,6 +13,7 @@ import { BlogPostCommentFormComponent } from './_templates/blog-post-comment-for
 import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './_templates/sidebar/sidebar.component';
 import { NewBlogPostPageComponent } from './pages/new-blog-post-page/new-blog-post-page.component';
+import { BlogPostCommentsPageComponent } from './pages/blog-post-comments-page/blog-post-comments-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NewBlogPostPageComponent } from './pages/new-blog-post-page/new-blog-po
     BlogPostCommentComponent,
     BlogPostCommentFormComponent,
     SidebarComponent,
-    NewBlogPostPageComponent
+    NewBlogPostPageComponent,
+    BlogPostCommentsPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BlogPostComment } from '../interfaces/blog-post-comment';
+import { BlogPostService } from './blog-post.service';
 import { MainService } from './main.service';
 
 @Injectable({
@@ -13,11 +14,19 @@ export class BlogPostCommentService extends MainService {
     { id: 4, blog_post_id: 5, name: 'Nicola Tesla', comment: 'Sehr große Spannung während des Lesens! Richtig gut!', created_at: '2020-08-15' },
   ];
 
-  constructor() { 
+  constructor(private blogPostService: BlogPostService) { 
     super();
   }
 
   getAllByBlogPostId(id: number): BlogPostComment[] {
     return this.objects.filter((i) => i.blog_post_id === id);
+  }
+
+  getAllWithBlogPosts(): BlogPostComment[] {
+    for (let i=0; i < this.objects.length; i++) {
+      this.objects[i].blog_post = this.blogPostService.findById(this.objects[i].blog_post_id)
+    }
+
+    return this.objects;
   }
 }
