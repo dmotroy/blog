@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { BlogPost } from 'src/app/interfaces/blog-post';
 import { BlogPostService } from 'src/app/services/blog-post.service';
+import { BlogPostCommentService } from 'src/app/services/blog-post-comment.service';
 
 @Component({
   selector: 'app-blog-post-page',
@@ -16,6 +17,7 @@ export class BlogPostPageComponent implements OnInit {
   constructor(
     private route: ActivatedRoute, 
     private blogPostService: BlogPostService,
+    private blogPostCommentService: BlogPostCommentService,
     private location: Location  
   ) { }
 
@@ -30,5 +32,6 @@ export class BlogPostPageComponent implements OnInit {
   getBlogPost(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.blog_post = this.blogPostService.findById(id);
+    this.blog_post.comments = this.blogPostCommentService.getAllByBlogPostId(id);
   }
 }
