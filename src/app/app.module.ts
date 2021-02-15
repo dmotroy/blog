@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './_templates/sidebar/sidebar.component';
 import { NewBlogPostPageComponent } from './pages/new-blog-post-page/new-blog-post-page.component';
 import { BlogPostCommentsPageComponent } from './pages/blog-post-comments-page/blog-post-comments-page.component';
+import { FooterComponent } from './_templates/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BlogPostCommentsPageComponent } from './pages/blog-post-comments-page/b
     BlogPostCommentFormComponent,
     SidebarComponent,
     NewBlogPostPageComponent,
-    BlogPostCommentsPageComponent
+    BlogPostCommentsPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
