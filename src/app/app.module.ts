@@ -7,13 +7,15 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavigationComponent } from './_templates/navigation/navigation.component';
 import { BlogPostComponent } from './_templates/blog-post/blog-post.component';
+import { BlogPostPageComponent } from './pages/blog-post-page/blog-post-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     NavigationComponent,
-    BlogPostComponent
+    BlogPostComponent,
+    BlogPostPageComponent
   ],
   imports: [
     BrowserModule,
