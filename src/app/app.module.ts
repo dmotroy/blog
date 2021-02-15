@@ -9,7 +9,7 @@ import { NavigationComponent } from './_templates/navigation/navigation.componen
 import { BlogPostComponent } from './_templates/blog-post/blog-post.component';
 import { BlogPostPageComponent } from './pages/blog-post-page/blog-post-page.component';
 import { BlogPostCommentComponent } from './_templates/blog-post-comment/blog-post-comment.component';
-import { BlogPostCommentFormComponent } from './forms/blog-post-comment-form/blog-post-comment-form.component';
+import { BlogPostCommentFormComponent } from './_templates/blog-post-comment-form/blog-post-comment-form.component';
 import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './_templates/sidebar/sidebar.component';
 import { NewBlogPostPageComponent } from './pages/new-blog-post-page/new-blog-post-page.component';
