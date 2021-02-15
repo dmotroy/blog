@@ -2,6 +2,6 @@
   Neuste Beiträge
 </h1>
 
-<div class="card mb-4" *ngFor="let blog_post of blog_posts">
+<div class="card mb-4" *ngFor="let blog_post of blog_posts.reverse()">
   <app-blog-post [blog_post]="blog_post"></app-blog-post>
 </div>

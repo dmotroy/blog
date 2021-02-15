@@ -19,7 +19,6 @@ export class NewBlogPostPageComponent implements OnInit {
   saveObject() {
     this.blogPostService.createOrUpdate(this.newBlogPost);
     this.resetObject();
-    window.location.href='/';
   }
 
   resetObject() {
