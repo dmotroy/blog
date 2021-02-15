@@ -9,6 +9,8 @@ import { NavigationComponent } from './_templates/navigation/navigation.componen
 import { BlogPostComponent } from './_templates/blog-post/blog-post.component';
 import { BlogPostPageComponent } from './pages/blog-post-page/blog-post-page.component';
 import { BlogPostCommentComponent } from './_templates/blog-post-comment/blog-post-comment.component';
+import { BlogPostCommentFormComponent } from './forms/blog-post-comment-form/blog-post-comment-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { BlogPostCommentComponent } from './_templates/blog-post-comment/blog-po
     NavigationComponent,
     BlogPostComponent,
     BlogPostPageComponent,
-    BlogPostCommentComponent
+    BlogPostCommentComponent,
+    BlogPostCommentFormComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

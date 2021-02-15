@@ -1,0 +1,22 @@
+<div class="card">
+  <h5 class="card-header">Kommentar hinzufügen:</h5>
+  <div class="card-body">
+    <div class="form-group">
+      <label>Name</label>
+      <div class="input-group">
+        <input
+          class="form-control"
+          placeholder="Name"
+          [(ngModel)]="newComment.name"
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Kommentar</label>
+      <div class="input-group">
+        <textarea class="form-control" rows="3" placeholder="Kommentar" [(ngModel)]="newComment.comment"></textarea>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="saveObject();">Abschicken</button>
+  </div>
+</div>

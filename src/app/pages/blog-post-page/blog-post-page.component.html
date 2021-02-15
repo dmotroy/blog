@@ -1,4 +1,4 @@
-<p style="padding-top: 20px;">
+<p style="padding-top: 20px">
   <button (click)="goBack()" class="btn btn-secondary">
     zurück zur Übersicht
   </button>
@@ -24,23 +24,15 @@
 <hr />
 
 <p>
-    {{ blog_post.description }}
+  {{ blog_post.description }}
 </p>
 
 <hr />
 
-<div class="card my-4">
-  <h5 class="card-header">Kommentar hinzufügen:</h5>
-  <div class="card-body">
-    <form>
-      <div class="form-group">
-        <textarea class="form-control" rows="3"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
+<div class="my-4">
+  <app-blog-post-comment-form [blog_post]="blog_post"></app-blog-post-comment-form>
 </div>
 
-<div class="mb-4" *ngFor="let comment of blog_post.comments">
+<div class="mb-4" *ngFor="let comment of blog_post.comments.reverse()">
   <app-blog-post-comment [comment]="comment"></app-blog-post-comment>
 </div>
